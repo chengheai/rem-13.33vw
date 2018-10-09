@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset=UTF-8>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>领取好礼</title>
+	<link rel="stylesheet" href="mobile1.css" tppabs="./mobile1.css">
+	<script>
+		(function (window, document) {
+      var getRem = function () {
+        if (document) {
+          var html = document.documentElement;
+          var hWidth = (html.getBoundingClientRect().width) * (750 / 352);
+          console.log(hWidth)
+          html.style.fontSize = hWidth / 16 + "px";
+          console.log(html.style.fontSize)
+        }
+      };
+      getRem();
+      window.onresize = function () {
+        getRem();
+      }
+    })(window, document)
+
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="content">
+			<input type="tel" placeholder="输入手机号码" id="mobile">
+			<img class="btn" src="./img/login.png" alt="">
+		</div>
+		<div class="popup">
+			<img src="./img/more.png" alt="" class="more">
+		</div>
+		<div class="verify">
+			<img class="close" src="./img/closePop.png" alt="">
+			<input id="verifyCode" type="text">
+
+
+			<div class="getCode">
+				<img src="./img/getCode.png" alt="">
+			</div>
+			<div class="resend">
+				<img src="./img/resend.png" alt="">
+				<span id="time">60s</span>
+			</div>
+			<div class="confirm">
+			</div>
+		</div>
+		<div class="bg"></div>
+</body>
+</html>
